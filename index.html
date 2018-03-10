@@ -5,29 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\css\bootstrap.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Find Your Hike</title>
 </head>
 
 <body>
     <div class="jumbotron">
-        <h1 id="primaryHeader">Placeholder for main header content</h1>
+        <h1 id="primaryHeader">Out N' Go</h1>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">Placeholder for mission statement</div>
-            <div class="col-sm-4">Placeholder for weather data </div>
+            <div id="mission" class="col-sm-6"></div>
+            <div class="col-sm-6" id="imageDiv">Image will load here</div>
         </div>
         <div class="row">
             <div class="col-sm-12">Empty Div right now, but will populate with our Hiking Map Automatically on page load based on geolocation</div>
         </div>
+        <h3>What type of trail would you like to hike?</h3>
         <div class="row">
             <div class="col-sm-3">
                 <form class="searchForm">
                     <div class="form-group">
                         <label for="radius">Radius</label>
-                        <input type="text" id="radius" placeholder="Enter Desired Radius">
+
+                        <br>
+                        <input type="number" id="radius" placeholder="Enter Desired Radius">
                     </div>
                 </form>
             </div>
@@ -35,7 +39,10 @@
                 <form class="searchForm">
                     <div class="form-group">
                         <label for="zipCode">Zip Code</label>
-                        <input type="text" id="zipCode" placeholder="Enter Zip Code">
+
+                        <br>
+
+                        <input type="number" id="zipCode" placeholder="Enter Zip Code">
                     </div>
                 </form>
             </div>
@@ -43,15 +50,21 @@
                 <form class="searchForm">
                     <div class="form-group">
                         <label for="length">Trail Length</label>
-                        <input type="text" id="length" placeholder="Desired Max Trail Length">
+
+                        <br>
+
+                        <input type="number" id="length" placeholder="Desired Max Trail Length">
                     </div>
                 </form>
             </div>
             <div class="col-sm-3">
                 <form class="searchForm">
                     <div class="form-group">
-                        <label for="description">Search Trail by Keyword</label>
-                        <input type="text" id="description" placeholder="Enter Keyword">
+                        <label for="numberResults">Number of Results</label>
+
+                        <br>
+
+                        <input type="number" id="description" placeholder="Number of Desired Results">
                     </div>
                 </form>
             </div>
@@ -75,21 +88,68 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
+                <h3>Rate a Trail</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <form class="trailName">
+                    <div class="form-group">
+                        <label for="trailName">Trail Name</label>
+                        <input type="text" id="trailName" placeholder="Trail Name">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <form class="submitReview">
+                    <div class="form-group">
+                        <label for="starRating">Rate a trail</label>
+                        <input type="number" id="starRating" placeholder="Rate 0-4 Stars">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <form class="comments">
+                    <div class="form-group">
+                        <label for="comments">Comments about the trail</label>
+                        <input type="text" id="comments" placeholder="Type comments">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="submitReview">
+                    <div class="form-group">
+                        <input id="submitReview" type="submit" value="Submit Review">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
                 <table class="table reviewTable" id="userReviews">
                     <tr class="tableHeaders" id="tRHeader">
-                        <th>User Rating out of 10</th>
-                        <th>Comments</th>
+                        <th>Name</th>
+                        <th>Difficulty</th>
+                        <th>Summary</th>
+                        <th>Link</th>
                     </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>PlaceHolder Comments for User comments. Our Table will autopopulate on load from info pulled from
-                            our FireBase server.</td>
-                    </tr>
+                    <tbody id="trailinfo">
+                        <tr>
+
+                        </tr>
+
+                    </tbody>
+
                 </table>
             </div>
         </div>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
 
 </html>

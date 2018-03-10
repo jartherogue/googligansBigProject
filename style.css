@@ -1,6 +1,64 @@
 body {
-    background-color: tan;
+    background-color: lightsteelblue;
+    width: 100%;
+    color: black;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 .jumbotron {
-    background-image:url("../pictures/tumblr_n0c3djGnF71qbqhgpo5_1280");
+    background-image: url(https://clintlosee.com/supergreenlizard/wp-content/uploads/2014/08/A-Moment-of-Wonder-Utah-Landscape-Photography.jpg);
+    text-align: center; 
+    background-size: 100%;
+    font-family: 'Acme', sans-serif;
+    font-weight: bold;
+    padding-bottom: 10%;
 }
+#primaryHeader {
+    font-size: 600%;
+}
+.container {
+    width: 75%;
+    margin: 0 auto;
+    clear: both;
+    background-color: white;
+    border-radius: 8px;
+}
+#mission {
+    margin: auto;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    background-size: 100%;
+    background-image: url(https://static.pexels.com/photos/287240/pexels-photo-287240.jpeg);
+}
+    h3 {
+    background-color: rgb(166,180,191);
+    color: black;
+    padding: 5px;
+}
+#submit{
+    padding: 5px;
+}
+#submitReview {
+    padding: 5px;
+}
+.form-group {
+    margin: auto;
+}
+#submit{
+    padding: 5px;
+    color: black;
+}
+#submitReview {
+    padding: 5px;
+    color: black;
+}
+::placeholder {
+    color: rgb(85, 83, 83);
+    opacity: 1;
+}
+input {
+    background-color:rgb(227, 230, 241);
+    border-radius: 5px;
+    }
